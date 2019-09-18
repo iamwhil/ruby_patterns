@@ -25,6 +25,9 @@ end
 # This pizza store knows nothing about how to create a pizza...
 # It does know how to use a pizza factory and what a pizza can do.
 # It is less coupled to the pizza (especially the creation).
+# It can use the factory's product (pizza) but the factory can do all the creating.
+# This allows for the Factory to create products for multiple classes
+# and to do alter the creation we only have to do it in one place.
 class PizzaStore
   PIZZA_FACTORY = PizzaFactory.new()
   def make_a_pizza(pizza_type)
